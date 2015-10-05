@@ -19,22 +19,22 @@ DicionarioAberto.define('a')
 		//=> Object
 	});
 
-DicionarioAberto.search({'prefix': 'a'});
+DicionarioAberto.search({'prefix': 'a'})
 	.then(function(results) {
 		//=> String[]
 	});
 
-DicionarioAberto.search({'suffix': 'z'});
+DicionarioAberto.search({'suffix': 'z'})
 	.then(function(results) {
 		//=> String[]
 	});
 
-DicionarioAberto.search({'prefix': 'a', 'suffix': 'z'});
+DicionarioAberto.search({'prefix': 'a', 'suffix': 'z'})
 	.then(function(results) {
 		//=> String[]
 	});
 
-DicionarioAberto.search({'like': 'a'});
+DicionarioAberto.search({'like': 'a'})
 	.then(function(results) {
 		//=> String[]
 	});
