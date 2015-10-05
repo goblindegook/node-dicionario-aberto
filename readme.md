@@ -1,6 +1,6 @@
 # dicionario-aberto [![Build Status](https://travis-ci.org/goblindegook/node-dicionario-aberto.svg?branch=master)](https://travis-ci.org/goblindegook/node-dicionario-aberto)
 
-Query the [Dicionário Aberto](http://dicionario-aberto.net) project API using a promisified (Bluebird/A+ compatible) interface.
+Query the [Dicionário Aberto](http://dicionario-aberto.net) project API using a promisified (A+ compliant) interface.
 
 ## Install
 
