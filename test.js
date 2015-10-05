@@ -7,7 +7,6 @@ import dicionarioAberto from './';
 
 test('Has default URL', t => {
   const DicionarioAberto = dicionarioAberto();
-  console.log(DicionarioAberto);
   t.is(DicionarioAberto.baseUrl, 'http://dicionario-aberto.net/search-json');
   t.end();
 });
