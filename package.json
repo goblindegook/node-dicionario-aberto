@@ -1,0 +1,37 @@
+{
+  "name": "dicionario-aberto",
+  "version": "0.1.0",
+  "description": "",
+  "license": "MIT",
+  "repository": "goblindegook/node-dicionario-aberto",
+  "author": {
+    "name": "Luís Rodrigues",
+    "email": "hello@goblindegook.com",
+    "url": "http://goblindegook.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "ava test.js",
+    "lint": "eslint index.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "dictionary",
+    "portuguese"
+  ],
+  "dependencies": {
+    "lodash.assign": "^3.2.0",
+    "lodash.isempty": "^3.0.4",
+    "lodash.pick": "^3.1.0",
+    "request-promise": "^0.4.3"
+  },
+  "devDependencies": {
+    "ava": "^0.2.0",
+    "eslint": "^1.6.0",
+    "sinon": "^1.17.1"
+  }
+}
