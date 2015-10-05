@@ -3,7 +3,7 @@
 import test from 'ava';
 import sinon from 'sinon';
 import request from 'request-promise';
-import dicionarioAberto from '.';
+import dicionarioAberto from './';
 
 test('Has default URL', t => {
   const DicionarioAberto = dicionarioAberto();
