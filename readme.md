@@ -11,6 +11,8 @@ $ npm install --save dicionario-aberto
 
 ## Usage
 
+The `search()` and `define()` methods return promises to the objects deserialized from Dicionário Aberto's JSON responses.
+
 ```js
 var DicionarioAberto = require('dicionario-aberto')();
 

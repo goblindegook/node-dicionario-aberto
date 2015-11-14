@@ -24,14 +24,16 @@
     "portuguese"
   ],
   "dependencies": {
+    "bluebird": "^3.0.5",
+    "isomorphic-fetch": "^2.2.0",
     "lodash.assign": "^3.2.0",
     "lodash.isempty": "^3.0.4",
     "lodash.pick": "^3.1.0",
-    "request-promise": "^0.4.3"
+    "querystring": "^0.2.0"
   },
   "devDependencies": {
-    "ava": "^0.2.0",
-    "eslint": "^1.6.0",
-    "sinon": "^1.17.1"
+    "ava": "^0.4.2",
+    "eslint": "^1.9.0",
+    "nock": "^2.18.2"
   }
 }

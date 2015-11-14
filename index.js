@@ -1,9 +1,11 @@
 'use strict';
 
+var Promise = require('bluebird');
+var fetch   = require('isomorphic-fetch');
 var assign  = require('lodash.assign');
 var isEmpty = require('lodash.isempty');
 var pick    = require('lodash.pick');
-var request = require('request-promise');
+var qs      = require('querystring');
 
 var DicionarioAberto = {
   /**
@@ -18,10 +20,13 @@ var DicionarioAberto = {
    * @return {Promise}      Promise yielding the entry's definition object.
    */
   define: function(word) {
-    return request.get({
-      baseUrl: this.baseUrl,
-      uri:     word
-    });
+    return fetch(this.baseUrl + '/' + word)
+      .then(function (response) {
+        if (response.status >= 400) {
+          throw new Error(response.statusText);
+        }
+        return response.json();
+      });
   },
 
   /**
@@ -33,17 +38,21 @@ var DicionarioAberto = {
    * @return {Promise}         Promise yielding an array of entry strings.
    */
   search: function(options) {
-    var qs = pick(options, ['prefix', 'suffix', 'like']);
+    var query = pick(options, ['prefix', 'suffix', 'like']);
 
-    if (isEmpty(qs)) {
-      throw new Error('Missing search operator. Allowed: prefix, suffix, like.');
+    if (isEmpty(query)) {
+      return new Promise(function () {
+        throw new Error('Missing search operator. Allowed: prefix, suffix, like.');
+      });
     }
 
-    return request.get({
-      baseUrl: this.baseUrl,
-      uri:     '',
-      qs:      qs
-    });
+    return fetch(this.baseUrl + '?' + qs.encode(query))
+      .then(function (response) {
+        if (response.status >= 400) {
+          throw new Error(response.statusText);
+        }
+        return response.json();
+      });
   }
 
 };
