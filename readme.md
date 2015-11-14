@@ -23,22 +23,22 @@ DicionarioAberto.define('a')
 
 DicionarioAberto.search({'prefix': 'a'})
 	.then(function(results) {
-		//=> String[]
+		//=> Object
 	});
 
 DicionarioAberto.search({'suffix': 'z'})
 	.then(function(results) {
-		//=> String[]
+		//=> Object
 	});
 
 DicionarioAberto.search({'prefix': 'a', 'suffix': 'z'})
 	.then(function(results) {
-		//=> String[]
+		//=> Object
 	});
 
 DicionarioAberto.search({'like': 'a'})
 	.then(function(results) {
-		//=> String[]
+		//=> Object
 	});
 ```
 
