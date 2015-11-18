@@ -2,7 +2,6 @@
 
 import test from 'ava'
 import nock from 'nock'
-import fetch from 'isomorphic-fetch'
 import dicionarioAberto from './'
 
 test('Has default URL', t => {

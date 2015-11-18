@@ -1,13 +1,16 @@
 'use strict';
 
 var Promise = require('bluebird');
+
+if (!global.Promise) {
+  global.Promise = Promise;
+}
+
 var fetch   = require('isomorphic-fetch');
 var assign  = require('lodash.assign');
 var isEmpty = require('lodash.isempty');
 var pick    = require('lodash.pick');
 var qs      = require('querystring');
-
-fetch.Promise = Promise;
 
 var DicionarioAberto = {
   /**
