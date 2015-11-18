@@ -7,6 +7,8 @@ var isEmpty = require('lodash.isempty');
 var pick    = require('lodash.pick');
 var qs      = require('querystring');
 
+fetch.Promise = Promise;
+
 var DicionarioAberto = {
   /**
    * Root URL for the Dicionário Aberto API.
