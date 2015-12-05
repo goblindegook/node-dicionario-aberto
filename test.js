@@ -7,13 +7,11 @@ import dicionarioAberto from './'
 test('Has default URL', t => {
   const dictionary = dicionarioAberto()
   t.is(dictionary.baseUrl, 'http://dicionario-aberto.net/search-json')
-  t.end()
 })
 
 test('Allows custom URL', t => {
   const dictionary = dicionarioAberto({baseUrl: 'http://custom/search'})
   t.is(dictionary.baseUrl, 'http://custom/search')
-  t.end()
 })
 
 test('Requests definitions', async t => {
@@ -28,7 +26,6 @@ test('Requests definitions', async t => {
   const result = await dictionary.define(word)
 
   t.same(result, response)
-  t.end()
 })
 
 test('Throws error when definition not found', async t => {
@@ -41,7 +38,6 @@ test('Throws error when definition not found', async t => {
 
   await t.throws(dictionary.define(word))
 
-  t.end()
 })
 
 test('Performs prefix searches', async t => {
@@ -57,7 +53,6 @@ test('Performs prefix searches', async t => {
   const result = await dictionary.search(query)
 
   t.same(result, response)
-  t.end()
 })
 
 test('Performs suffix searches', async t => {
@@ -73,7 +68,6 @@ test('Performs suffix searches', async t => {
   const result = await dictionary.search(query)
 
   t.same(result, response)
-  t.end()
 })
 
 test('Performs prefix and suffix searches', async t => {
@@ -89,7 +83,6 @@ test('Performs prefix and suffix searches', async t => {
   const result = await dictionary.search(query)
 
   t.same(result, response)
-  t.end()
 })
 
 test('Performs similarity searches', async t => {
@@ -105,11 +98,9 @@ test('Performs similarity searches', async t => {
   const result = await dictionary.search(query)
 
   t.same(result, response)
-  t.end()
 })
 
 test('Throws error on missing search operators', async t => {
   const dictionary = dicionarioAberto()
   await t.throws(dictionary.search())
-  t.end()
 })
