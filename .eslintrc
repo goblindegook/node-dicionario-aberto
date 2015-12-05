@@ -1,3 +1,13 @@
 {
-	"preset": "airbnb"
+  "preset": "airbnb",
+  "ecmaFeatures": {
+    "modules": true
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "no-unexpected-multiline": 2
+  }
 }
