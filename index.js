@@ -1,10 +1,6 @@
 'use strict';
 
-var Promise = require('bluebird');
-
-if (!global.Promise) {
-  global.Promise = Promise;
-}
+require('es6-promise').polyfill();
 
 var fetch   = require('isomorphic-fetch');
 var assign  = require('lodash.assign');

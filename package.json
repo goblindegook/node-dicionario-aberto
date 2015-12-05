@@ -24,7 +24,7 @@
     "portuguese"
   ],
   "dependencies": {
-    "bluebird": "^3.0.5",
+    "es6-promise": "^3.0.2",
     "isomorphic-fetch": "^2.2.0",
     "lodash.assign": "^3.2.0",
     "lodash.isempty": "^3.0.4",
@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "ava": "^0.4.2",
-    "eslint": "^1.9.0",
+    "eslint": "^1.10.3",
     "nock": "^2.18.2"
   }
 }
